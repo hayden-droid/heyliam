@@ -11,6 +11,7 @@ module.exports = class HeyLiam extends Plugin {
       "752300707444555863/skin.png",
       "752300709659279441/Undertale_me.png",
       "752302434466136064/0.png",
+      "752357853389652008/but_what_if_kirby_had_teeth_AND_I_WAS_BEUTIFUL.png",
     ];
   }
 
