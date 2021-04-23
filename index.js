@@ -1,41 +1,39 @@
 const { Plugin } = require("powercord/entities");
 
-module.exports = class HeyLiam extends Plugin {
+module.exports = class sus extends Plugin {
   constructor() {
     super();
     this.images = [
-      "752300699030781962/IMSOCUTE.png",
-      "752300700947578910/Liam_headshot.png",
-      "752300702344151180/Me_but_protogen.png",
-      "752300707490824232/MEH_SIS_IS_SO_TALENTED_SHE_TURNED_ME_INTO_A_ROBOT_FUR_BOI.png",
-      "752300707444555863/skin.png",
-      "752300709659279441/Undertale_me.png",
-      "752302434466136064/0.png",
-      "752357853389652008/but_what_if_kirby_had_teeth_AND_I_WAS_BEUTIFUL.png",
+      "/id/OIP.oMi5AReE7DTznYa7_QDRGQHaJp?w=138&h=180&c=7&o=5&pid=1.7",
+      "/id/OIP.sf3BGxNx0RqsmSzcN4FV5AHaHa?w=173&h=180&c=7&o=5&pid=1.7",
+      "/id/OIP.NJpbh9JWEKjWTAi8PzHtlAHaHa?w=154&h=180&c=7&o=5&pid=1.7",
+      "/id/OIP.Pu400p9TjljSxMHkRnN7uQAAAA?w=133&h=180&c=7&o=5&pid=1.7",
+      "/id/OIP.F0nrdiPwbXJQHVxBjZBadAHaHa?w=178&h=180&c=7&o=5&pid=1.7",
+      "/id/OIP.JxGlctIZ6_Cn7loZcKF92wHaHa?w=172&h=180&c=7&o=5&pid=1.7",
     ];
   }
 
   startPlugin() {
     this.registerCommand(
-      "heyliam",
+      "sus",
       [],
-      "Replaces every image with a random image of Liam",
+      "Replaces every image with a random image of SUS",
       "{c}",
-      this.heyliam.bind(this)
+      this.sus.bind(this)
     );
   }
 
   pluginWillUnload() {
-    powercord.api.commands.unregisterCommand("heyliam");
+    powercord.api.commands.unregisterCommand("sus");
   }
 
   getRandomURL() {
-    return `https://cdn.discordapp.com/attachments/752299658839195692/${
+    return `https://th.bing.com/th${
       this.images[Math.floor(Math.random() * this.images.length)]
     }`;
   }
 
-  heyliam() {
+  sus() {
     document
       .querySelectorAll('[style*="background-image"]')
       .forEach(
